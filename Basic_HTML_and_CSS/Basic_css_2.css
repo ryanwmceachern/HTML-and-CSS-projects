@@ -1,0 +1,11 @@
+p	{
+		color: red;
+		backround: black;
+		font-weight: bold;
+		text-align: center;
+}
+p	{
+		padding: 2rem;
+		text-shadow: 10px 2px 2px #bada55;
+}
+		
