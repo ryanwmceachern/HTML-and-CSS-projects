@@ -1,9 +1,10 @@
 /*====================================================
  authour: Ryan McEachern
- ________________________
+ checkoutmy.space
  ======================================================
 	GENERIC STYLES
 =======================================================*/
+
 html {
 	font-family: sans-serif;
 	font-size: 62.5%;
@@ -15,7 +16,7 @@ html {
 body {
 	font-size: 14px;
 	margin: 0;
-	font-family: "helvetica heue", helvetica, arial, sans-serif;
+	font-family: "Helvetica Heue", Helvetica, Arial, sans-serif;
 	line-height: 1.42857143;
 	color: #333;
 	background-color: #fff;
@@ -27,7 +28,7 @@ nav {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'open saga', sans-serif;
+	font-family: 'open sans', sans-serif;
 }
 
 h1 {
@@ -36,7 +37,7 @@ h1 {
 	font-size: 30px;
 	text-transform: uppercase;
 	text-align: center;
-	color: #e91c1c;
+	color: #E91C1C;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.5)
 }
 
@@ -51,7 +52,7 @@ h1::after { /* this is the underline */
 }
 
 h2 {
-	line-height: 30px;
+	line-height: 50px;
 	color: #E91C1C;
 }
 
@@ -135,15 +136,11 @@ section {
 
 .menu-container {
 	max-height: 340px;
-	margin: 0% auto;
+	margin: 0% auto; /*center allingment */
 	content: " ";
-	/* top: 0;
-	left: 0; */
-	/* position: absolute; */ /* to the top edge of the screen */
 	width: 100%;
 	position: fixed;
 	z-index: 100;
-	/*background-color: rgba(255, 255, 255, 0.5);*/
 }
 
 /*=========================================================
@@ -170,7 +167,7 @@ section {
 	color: #fff;
 	letter-spacing: 5pt;
 	word-spacing: 21pt;
-	font-size: 4.5cm;
+	font-size: 4.5em;
 	text-align: left;
 	font-family: impact, sans-serif;
 	line-height: 2;
@@ -197,6 +194,7 @@ section {
 /*======================================================
 Contact STYLES
 ========================================================*/
+
 .flex-container {
 	display: -webkit-flex;
 	display: flex;
@@ -204,8 +202,21 @@ Contact STYLES
 	padding: 10px;
 	border-radius: 8px;
 	margin: 0px auto;
-	background-color: rgba(100,65,0,.3);
-	box-shadow: -1px -1px 1px 0 rgba(0,0,0,0.5);
+	background-color: rgba(100,65,0,0.3);
+	box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.5);
+}
+
+.contact {
+    background-color: #F5F3F3;
+}
+
+.reservation {
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 0px auto;
+    background-color: rgba(100, 65, 0, 0.3);
+    box-shadow: -1px -1px 1px 0 rgba(0, 0, 0, 0.1), 1px 2px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
 .reservation h2 {
@@ -214,7 +225,7 @@ Contact STYLES
 	margin: 0 auto;
 	color: #13161B;
 	font-weight: 500;
-	font-size: 1.3cm;
+	font-size: 1.3em;
 	letter-spacing: 0pt;
 	word-spacing: 0pt;
 }
@@ -225,7 +236,7 @@ Contact STYLES
 	margin: 0 auto;
 	color: #13161B;
 	font-weight: 900;
-	font-size: 1.5cm;
+	font-size: 1.5em;
 	font-variant: small-caps;
 	letter-spacing: .4pt;
 	word-spacing: .3pt;
@@ -247,31 +258,37 @@ Contact STYLES
 	border: 1px solid #808080;
 	margin: 2% auto;
 	border-radius: 7px;
-	background: rgb(227,222,222);
+	background: rgb(227, 222, 222);
 	box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.3);
-	font-family: 'raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
+/* The palceholder text was too dim for my liking.  So I found a way to make it 
+   the color of when you start typing into the form    */
 
+::placeholder {
+    color: #8D8E8F;
+    opacity: 1;
+}
 .reservation input[type="text"] {
 	font-size: 15px;
 	outline: none;
 	font-weight: 600;
-	color: #8D8E8F;
+	color: #8D8E8F; /* this is the color when user starts typing into form */
 	padding: 2% 1% 2% 7%;
 	width: 80%;
 	border-top: 1px solid #090B0D;
 	border-right: 2px solid #424549;
 	border-bottom: 2px solid #424549;
 	border-left: 1px solid #090B0D;
-	margin: 10px 1cm;
+	margin: 10px 1em;
 	border-radius: 7px;
 	background: #13161B;
 	box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
-	font-family: 'raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 .reservation input[type="text"]:hover {
-	box-shadow: 0 0 18px rgba(100,65,0,.8);
+	box-shadow: 0 0 10px rgba(100,65,0,.8);
 }
 
 .form-spacer {
@@ -279,17 +296,15 @@ Contact STYLES
 }
 
 .terms {
-	margin: 30px 1 px 0 0 ;
-	margin-top: 13%;
-	padding-left: 52px;
+	margin: 23px 41 px 0 0 ;
 	font-size: 14px;
 	line-height: 5px;
 	color: #000;
 	cursor: pointer;
-	font-family: 'raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 600;
-	position: relative;
-	display: inline;
+	/* position: relative;
+	display: inline; */
 	float: right;
 }
 
@@ -308,11 +323,11 @@ Contact STYLES
 	font-family: 'raleway', sans-serif;
 	margin: 0px 3%;
 	padding: 7px 0px;
-	width: 25;
+	width: 25%;
 	font-size: 18px;
 	transition: border-color 0.3s color 0.3s background-color 0.3s;
 	border-radius: 7px;
-	background-color: #797a7b;
+	background-color: #797A7B;
 	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.5);
 }
 
@@ -325,13 +340,45 @@ Contact STYLES
 /*======================================================
 	FOOTER STYLES
 ========================================================*/
+
 #footer {
 	background-color: rgba(100,65,0,.3);
 	color: #000;
-	text-shadow: 2px 2px 8px 0 (0,0,0,0.4);
+	text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 	padding: 20px 50px 20px 50px;
 	text-align: right;
 }
+
+
+/*=======================================
+  @MEDIA QUERIES
+  =======================================*/
+  /* @media all and (max-width:640px) and (min-width:381px) {
+    .head-main { 
+        font-size: 28px ;
+    }
+}
+@media all and (max-width:381px) and (min-width:200px) {
+    .head-main { 
+        font-size: 24px ;
+    }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+} */
 	
 
 
